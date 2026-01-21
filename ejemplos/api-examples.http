@@ -1,0 +1,44 @@
+### Generar Contrato
+POST http://localhost:8080/api/reportes/contrato
+Content-Type: application/json
+
+{
+  "parametros": {
+    "clienteId": 123,
+    "nombre": "Juan Pérez",
+    "fechaContrato": "2026-01-21",
+    "monto": 15000.50
+  }
+}
+
+###
+
+### Generar Reporte Personalizado
+POST http://localhost:8080/api/reportes/personalizado
+Content-Type: application/json
+
+{
+  "templateNombre": "ReporteVentas",
+  "parametros": {
+    "fechaInicio": "2026-01-01",
+    "fechaFin": "2026-01-31",
+    "vendedorId": 456
+  }
+}
+
+###
+
+### Health Check (API)
+GET http://localhost:8080/api/reportes/health
+
+###
+
+### Health Check (Actuator)
+GET http://localhost:8080/actuator/health
+
+###
+
+### Métricas
+GET http://localhost:8080/actuator/metrics
+
+###
