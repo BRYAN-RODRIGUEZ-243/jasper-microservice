@@ -28,7 +28,7 @@ USER spring:spring
 COPY --from=build /app/target/*.jar app.jar
 
 # Exponer puerto
-EXPOSE 8080
+EXPOSE 1313
 
 # Variables de entorno por defecto
 ENV SPRING_PROFILES_ACTIVE=prod
@@ -36,7 +36,7 @@ ENV JAVA_OPTS="-Xmx512m -Xms256m"
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:8080/actuator/health || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://localhost:1313/actuator/health || exit 1
 
 # Ejecutar aplicación
 ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]

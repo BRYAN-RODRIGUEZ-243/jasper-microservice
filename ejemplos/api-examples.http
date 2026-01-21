@@ -1,5 +1,5 @@
 ### Generar Contrato
-POST http://localhost:8080/api/reportes/contrato
+POST http://localhost:1313/api/reportes/contrato
 Content-Type: application/json
 
 {
@@ -14,7 +14,7 @@ Content-Type: application/json
 ###
 
 ### Generar Reporte Personalizado
-POST http://localhost:8080/api/reportes/personalizado
+POST http://localhost:1313/api/reportes/personalizado
 Content-Type: application/json
 
 {
@@ -29,16 +29,16 @@ Content-Type: application/json
 ###
 
 ### Health Check (API)
-GET http://localhost:8080/api/reportes/health
+GET http://localhost:1313/api/reportes/health
 
 ###
 
 ### Health Check (Actuator)
-GET http://localhost:8080/actuator/health
+GET http://localhost:1313/actuator/health
 
 ###
 
 ### Métricas
-GET http://localhost:8080/actuator/metrics
+GET http://localhost:1313/actuator/metrics
 
 ###
